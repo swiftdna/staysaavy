@@ -16,7 +16,7 @@ router.use(express.json());
 
 var connection = mysql.createConnection({
   host: "database-1.cerbnelrueyi.us-east-1.rds.amazonaws.com",
-  database: "202_team_project",
+  database: "staysaavy",
   port: "3306",
   user: "admin",
   password: "password",
