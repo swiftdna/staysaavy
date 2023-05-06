@@ -9,13 +9,13 @@ const { check, validationResult } = require("express-validator");
 const { createRoom } = require('./logics');
 
 router.use(cors());
-const User = require("../../models/User");
+const User = require("../models/User");
 const e = require("express");
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 var connection = mysql.createConnection({
-  host: "database-1.cerbnelrueyi.us-east-1.rds.amazonaws.com",
+  host: "database-1.crrtrlvp5oef.us-east-2.rds.amazonaws.com",
   database: "staysaavy",
   port: "3306",
   user: "admin",

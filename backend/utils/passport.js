@@ -6,7 +6,7 @@ var { secret } = require('./config');
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host: 'database-1.cerbnelrueyi.us-east-1.rds.amazonaws.com',
+    host: 'database-1.crrtrlvp5oef.us-east-2.rds.amazonaws.com',
     database: 'staysaavy',
     port: '3306',
     user: 'admin',
@@ -15,6 +15,7 @@ var connection = mysql.createConnection({
 
 connection.connect((err) => {
     if (err) {
+        console.log('err -> ', err);
         throw 'Error occured ' + err;
     }
     console.log("pool created");
