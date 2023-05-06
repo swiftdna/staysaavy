@@ -31,7 +31,7 @@ var connection = mysql.createPool({
 */
 NINJACOUCH = {};
 const connection = mysql.createConnection({
-    host: 'database-1.cerbnelrueyi.us-east-1.rds.amazonaws.com',
+    host: 'database-1.crrtrlvp5oef.us-east-2.rds.amazonaws.com',
     database: 'staysaavy',
     port: '3306',
     user: 'admin',
@@ -94,14 +94,14 @@ app.post('/logout', (req, res) => {
 
 app.use('/api/v1', routes);
 //Defining Routes
-app.use('/api/users', require('./routes/api/users'));
-app.use('/api/auth', require('./routes/api/auth'));
+app.use('/api/users', require('./api/users'));
+app.use('/api/auth', require('./api/auth'));
 //app.use('/api/posts', require('./routes/api/posts'));
-app.use('/api/hotel', require('./routes/api/hotel'));
-app.use('/api/admin', require('./routes/api/admin'));
-app.use('/api/rooms', require('./routes/api/rooms'));
+app.use('/api/hotel', require('./api/hotel'));
+app.use('/api/admin', require('./api/admin'));
+app.use('/api/rooms', require('./api/rooms'));
 //app.use('/api/bookings', require('./routes/api/bookings'));
-app.use('/api/reservation', require('./routes/api/reservation'));
+app.use('/api/reservation', require('./api/reservation'));
 //app.use('/api/restaurant', require('./routes/api/restaurant'));
 
 app.get('*', function (req, res) {

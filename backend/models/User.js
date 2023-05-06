@@ -1,4 +1,4 @@
-const etsy = (sequelize, type) => {
+const staysaavy = (sequelize, type) => {
     return sequelize.define('user', {
     uname:{
         type: String,
@@ -17,4 +17,4 @@ const etsy = (sequelize, type) => {
 };
 
 
-module.exports = etsy;
+module.exports = staysaavy;

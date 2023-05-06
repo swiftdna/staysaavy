@@ -1,13 +1,13 @@
 const express = require("express");
 //const auth = require('../../middleware/auth');
 const router = express.Router();
-const { checkAuth, auth } = require("../../utils/passport");
+const { checkAuth, auth } = require("../utils/passport");
 var mysql = require("mysql");
 auth();
 //For route use  GET api/auth
 
 var connection = mysql.createConnection({
-  host: "database-1.cerbnelrueyi.us-east-1.rds.amazonaws.com",
+  host: "database-1.crrtrlvp5oef.us-east-2.rds.amazonaws.com",
   database: "staysaavy",
   port: "3306",
   user: "admin",
