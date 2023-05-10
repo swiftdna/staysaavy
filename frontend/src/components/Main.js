@@ -18,7 +18,7 @@ import { checkSession } from '../utils';
 import { Toast, ToastContainer } from 'react-bootstrap';
 import { selectAlertFlag, selectToastFlag, selectAlertMessage, selectAlertType, selectIsLoggedIn, selectUser } from '../selectors/appSelector';
 import { clearToast } from '../actions/app-actions';
-
+import Chatbot from './Chatbot';
 //Create a Main Component
 export function Main() {
     const alert = useSelector(selectAlertFlag);
@@ -50,6 +50,8 @@ export function Main() {
                     <div className={alertMapping && alertMapping[alertType] ? alertMapping[alertType]: "alert alert-danger"} role="alert">
                         {alertMessage}
                     </div>
+  
+  
                 </div> : ''
             }
             <ToastContainer className="p-3" position={'bottom-end'} style={{zIndex: 10}}>
@@ -60,6 +62,7 @@ export function Main() {
                   <Toast.Body>{alertMessage}</Toast.Body>
                 </Toast>
             </ToastContainer>
+            <Chatbot />
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

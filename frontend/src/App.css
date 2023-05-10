@@ -11,7 +11,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 10px
 }
 
 .nav-buttons:hover {
@@ -342,4 +342,24 @@ video {
 .book-roomtype {
   font-weight: bold;
   font-size: 13px;
+}
+
+.chatbot {
+  position:relative;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: #0084ff;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.react-chatbot-kit-chat-user-message {
+  background-color: #f4f7f9;
+  color: #000;
+  border-radius: 20px;
 }
