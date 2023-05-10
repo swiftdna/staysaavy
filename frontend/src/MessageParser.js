@@ -1,4 +1,4 @@
-import { OpenAIApi } from 'openai';
+import { OpenAIApi, Configuration } from 'openai';
 
 class MessageParser {
   constructor(actionProvider) {
@@ -7,10 +7,12 @@ class MessageParser {
 
   async parse(message) {
     const userInput = message.text;
-    
-    const openai = new OpenAIApi({
-      apiKey: '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'
+
+    const configuration = new Configuration({
+      apiKey: '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',
     });
+    
+    const openai = new OpenAIApi(configuration);
 
     try {
       const gptResponse = await openai.createChatCompletion({
@@ -21,7 +23,6 @@ class MessageParser {
             content: "hello"
           },
           {
-            
             role: "user",
             content: userInput
           }
