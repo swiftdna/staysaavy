@@ -1,0 +1,12 @@
+prashanth@Prashanths-MacBook-Pro custom_gpt % openai api fine_tunes.create -t data2_prepared.jsonl -m davinci
+Upload progress: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20.9k/20.9k [00:00<00:00, 30.6Mit/s]
+Uploaded file from data2_prepared.jsonl: file-ivRlOePoIwWKIvL3IXKhr6Ix
+Created fine-tune: ft-C8jd2GEpzT1faNEWKII2ER3H
+Streaming events until fine-tuning is complete...
+
+(Ctrl-C will interrupt the stream, but not cancel the fine-tune)
+[2023-05-11 13:07:51] Created fine-tune: ft-C8jd2GEpzT1faNEWKII2ER3H
+[2023-05-11 13:08:12] Fine-tune costs $0.46
+[2023-05-11 13:08:13] Fine-tune enqueued. Queue number: 0
+[2023-05-11 13:08:16] Fine-tune started
+

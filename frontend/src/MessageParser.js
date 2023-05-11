@@ -16,22 +16,31 @@ class MessageParser {
     const openai = new OpenAIApi(configuration);
     // console.log('userInput -> ', userInput);
     try {
-      const gptResponse = await openai.createChatCompletion({
-        model: 'gpt-3.5-turbo',
-        messages: [
-          {
-            role: "system",
-            content: "hello"
-          },
-          {
-            role: "user",
-            content: message
-          }
-        ],
-        max_tokens: 60
+      // const gptResponse = await openai.createChatCompletion({
+      //   model: 'davinci:ft-personal-2023-05-11-20-12-31',
+      //   messages: [
+      //     {
+      //       role: "system",
+      //       content: "hello"
+      //     },
+      //     {
+      //       role: "user",
+      //       content: message
+      //     }
+      //   ],
+      //   max_tokens: 60
+      // });
+
+      const gptResponse = await openai.createCompletion({
+        model: 'davinci:ft-personal-2023-05-11-20-12-31',
+        prompt: message,
+        max_tokens: 60,
+        n: 1,
+        stop: '\n'
       });
 
-      this.actionProvider.handleMessage(gptResponse.data.choices[0].message.content.trim());
+      // this.actionProvider.handleMessage(gptResponse.data.choices[0].message.content.trim());
+      this.actionProvider.handleMessage(gptResponse.data.choices[0].text.trim());
     } catch (error) {
       console.error(error);
     }
