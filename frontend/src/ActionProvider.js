@@ -13,6 +13,15 @@ class ActionProvider {
      this.stateRef = stateRef;
      this.createCustomMessage = createCustomMessage;
    }
+
+   handleMessage(message) {
+    // handle the message
+    const greetingMessage = this.createChatBotMessage(message);
+    this.setState((state) => ({
+      ...state,
+      messages: [...state.messages, greetingMessage],
+    }));
+  }
  }
  
  export default ActionProvider;
