@@ -4,6 +4,8 @@ import MessageParser from '../MessageParser';
 import ActionProvider from '../ActionProvider';
 import "react-chatbot-kit/build/main.css";
 import React, { useState } from 'react';
+import { BsRobot } from "react-icons/bs";
+
 function Chatbot() {
     const [showChat, setShowChat] = useState(false);
     const toggleChat = () => {
@@ -19,10 +21,10 @@ function Chatbot() {
                     actionProvider={ActionProvider}
                 />
             )}
-            <button onClick={toggleChat}>
-                {showChat ? 'Close chat' : 'Open chat'}
-            </button>
-    
+            <div className="icon-container" onClick={toggleChat}>
+              <BsRobot className="icon" size={30} />
+            </div>
+            
     </div>
   );
 }
