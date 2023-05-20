@@ -2,12 +2,15 @@ const express = require('express');
 const session = require('express-session');
 const app = express();
 var mysql = require('mysql');
+var compression = require('compression');
 //const passport    = require('passport');
 var cors = require('cors');
 const cookieParser = require('cookie-parser');
 const routes = require('./routes');
 //var constraints = require("./config.json");
 
+// compress all responses
+app.use(compression())
 app.use(cookieParser());
 app.use(cors());
 

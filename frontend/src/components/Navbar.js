@@ -70,7 +70,7 @@ function Navbar() {
         <nav className="navbar navbar-light bgnew-light justify-content-between">
             <div className="container">
                 <div className="col-2">
-                    <img onClick={() => home()} className="navbar-brand-logo" src="NinjaCouchLogo.png" />
+                    <img onClick={() => home()} className="navbar-brand-logo" src="StaySaavyLogo.png" />
                     {isAdmin ? <span style={{fontSize: '10px', position: 'absolute',marginTop: '20px'}}>Admin</span> : ''}
                 </div>
                 <div className="col-8">
