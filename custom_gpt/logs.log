@@ -10,3 +10,20 @@ Streaming events until fine-tuning is complete...
 [2023-05-11 13:08:13] Fine-tune enqueued. Queue number: 0
 [2023-05-11 13:08:16] Fine-tune started
 
+prashanth@Prashanths-MacBook-Pro custom_gpt % openai api fine_tunes.follow -i ft-C8jd2GEpzT1faNEWKII2ER3H
+[2023-05-11 13:07:51] Created fine-tune: ft-C8jd2GEpzT1faNEWKII2ER3H
+[2023-05-11 13:08:12] Fine-tune costs $0.46
+[2023-05-11 13:08:13] Fine-tune enqueued. Queue number: 0
+[2023-05-11 13:08:16] Fine-tune started
+[2023-05-11 13:10:23] Completed epoch 1/4
+[2023-05-11 13:10:53] Completed epoch 2/4
+[2023-05-11 13:11:24] Completed epoch 3/4
+[2023-05-11 13:11:54] Completed epoch 4/4
+[2023-05-11 13:12:32] Uploaded model: davinci:ft-personal-2023-05-11-20-12-31
+[2023-05-11 13:12:33] Uploaded result file: file-gt9vbs3X9EA5CYQpGDdykhOs
+[2023-05-11 13:12:33] Fine-tune succeeded
+
+Job complete! Status: succeeded 🎉
+Try out your fine-tuned model:
+
+openai api completions.create -m davinci:ft-personal-2023-05-11-20-12-31 -p <YOUR_PROMPT>
