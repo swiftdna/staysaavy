@@ -10,7 +10,7 @@ class MessageParser {
     // const userInput = message.text;
 
     const configuration = new Configuration({
-      apiKey: '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',
+      apiKey: 'agag',
     });
     
     const openai = new OpenAIApi(configuration);
